@@ -25,4 +25,12 @@ test cases for linter
 ![gradlew run.PNG](picture%2Fgradlew%20run.PNG)
 
 ./gradlew test inside of your basiclibrary
+
 ![basiclib test.PNG](picture%2Fbasiclib%20test.PNG)
+
+test tally
+![tallytest.PNG](picture%2Ftallytest.PNG)
+
+test weathermonthly
+![weatherTest.PNG](picture%2FweatherTest.PNG)
+
