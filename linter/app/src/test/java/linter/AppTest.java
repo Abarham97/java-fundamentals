@@ -14,7 +14,7 @@ class AppTest {
 
     @Test
     void testNoErrors() throws IOException {
-        Path filePath = Path.of("C://Users//Barham//Desktop//labs//java-fundamentals//linter//app//src//test//resources//NoErrors.js");
+        Path filePath = Path.of("C://Users//Barham//java-fundamentals//linter//app//src//test//resources//NoErrors.js"); // Relative path
         String expected = ""; // No errors
         String result = App.JavaScriptLinter(filePath);
         assertEquals(expected, result);
@@ -22,7 +22,7 @@ class AppTest {
 
     @Test
     void testOneError() throws IOException {
-        Path filePath = Path.of("C://Users//Barham//Desktop//labs//java-fundamentals//linter//app//src//test//resources//oneError.js");
+        Path filePath = Path.of("C://Users//Barham//java-fundamentals//linter//app//src//test//resources//oneError.js");
         String expected = "Missing semicolon at line 2";
         String result = App.JavaScriptLinter(filePath);
         assertEquals(expected, result);
@@ -30,7 +30,7 @@ class AppTest {
 
     @Test
     void testFewErrors() throws IOException {
-        Path filePath = Path.of("C://Users//Barham//Desktop//labs//java-fundamentals//linter//app//src//test//resources//fewErrors.js");
+        Path filePath = Path.of("C://Users//Barham//java-fundamentals//linter//app//src//test//resources//fewErrors.js");
         String expected = "Missing semicolon at line 7\nMissing semicolon at line 8";
         String result = App.JavaScriptLinter(filePath);
         assertEquals(expected, result);
@@ -38,7 +38,7 @@ class AppTest {
 
     @Test
     void testManyErrors() throws IOException {
-        Path filePath = Path.of("C://Users//Barham//Desktop//labs//java-fundamentals//linter//app//src//test//resources//manyErrors.js");
+        Path filePath = Path.of("C://Users//Barham//java-fundamentals//linter//app//src//test//resources//manyErrors.js");
         String expected = "Missing semicolon at line 3\nMissing semicolon at line 5\nMissing semicolon at line 11\nMissing semicolon at line 13";
         String result = App.JavaScriptLinter(filePath);
         assertEquals(expected, result);
@@ -46,7 +46,7 @@ class AppTest {
 
     @Test
     void testEmptyFile() throws IOException {
-        Path filePath = Path.of("C://Users//Barham//Desktop//labs//java-fundamentals//linter//app//src//test//resources//emptyFile.js");
+        Path filePath = Path.of("C://Users//Barham//java-fundamentals//linter//app//src//test//resources//emptyFile.js");
         String expected = ""; // No errors in an empty file
         String result = App.JavaScriptLinter(filePath);
         assertEquals(expected, result);
