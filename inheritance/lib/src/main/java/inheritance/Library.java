@@ -8,7 +8,7 @@ public class Library {
         return true;
     }
 
-    public static  void main (){
+    public static  void main (String [] arg){
 
         Restaurant restaurant= new Restaurant("yasmeen",0,"$$");
         Review review1=new Review("is very good","ali",4);
