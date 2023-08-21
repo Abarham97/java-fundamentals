@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="linter.AppTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2023-08-19T18:11:53" hostname="DESKTOP-LVRV39G" time="0.034">
+  <properties/>
+  <testcase name="testOneError()" classname="linter.AppTest" time="0.025"/>
+  <testcase name="testEmptyFile()" classname="linter.AppTest" time="0.001"/>
+  <testcase name="testManyErrors()" classname="linter.AppTest" time="0.001"/>
+  <testcase name="testNoErrors()" classname="linter.AppTest" time="0.001"/>
+  <testcase name="testFewErrors()" classname="linter.AppTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
