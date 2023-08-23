@@ -8,19 +8,31 @@ public class Library {
         return true;
     }
 
+
     public static  void main (String [] arg){
 
-        Restaurant restaurant= new Restaurant("yasmeen",0,"$$");
-        Review review1=new Review("is very good","ali",4);
-        Review review2=new Review("not bad","arwa",3);
-        restaurant.addReview(review1);
-        restaurant.addReview(review2);
+
+        Restaurant restaurant = new Restaurant("Yasmeen", 0, "$$");
+        Review restaurantReview = new Review("Is very good", "Ali", 4);
+        restaurant.addReview(restaurantReview);
+
+        shop shop = new shop("Cool Shop", "Moderate");
+        Review shopReview = new Review("Nice products", "Sara", 5);
+        shop.addReview(shopReview);
+
+        Theater theater = new Theater("Awesome Theater", "Inception");
+        Review theaterReview = new Review("Loved the experience", "John", 4);
+        theater.addReview(theaterReview);
+
+
         System.out.println("Restaurant Information:");
         System.out.println(restaurant);
-        restaurant.getReviews();
 
+        System.out.println("Shop Information:");
+        System.out.println(shop);
 
-
+        System.out.println("Theater Information:");
+        System.out.println(theater);
     }
 
 }

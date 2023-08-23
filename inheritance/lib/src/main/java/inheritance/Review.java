@@ -7,10 +7,13 @@ public class Review {
 
     private int Stars;
 
+
+
     public Review(String body,String author,int Stars) {
         this.body = body;
         this.author=author;
         this.Stars=Stars;
+
     }
 
     public String getAuthor() {
@@ -35,4 +38,7 @@ public class Review {
                 ", Stars=" + Stars +
                 '}';
     }
+
+
+
 }

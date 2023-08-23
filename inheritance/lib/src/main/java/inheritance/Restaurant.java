@@ -43,17 +43,18 @@ public class Restaurant {
     }
 
     public void addReview(Review review) {
-        if (!reviews.contains(review)) {
-            reviews.add(review);
-            updateStarRating();
+        reviews.add(review);
+        updateStarRating();
+
         }
-    }
-    private void updateStarRating() {
+
+    public int  updateStarRating() {
         int totalStars = 0;
         for (Review review : reviews) {
             totalStars += review.getStars();
         }
         Stars = totalStars / reviews.size();
+        return Stars;
     }
 
 
