@@ -2,43 +2,40 @@ package inheritance;
 
 public class Review {
 
-    private  String body;
-    private  String author;
+    private String body;
+    private String author;
+    private int stars;
+  private Store store;
+    private String movie;
 
-    private int Stars;
-
-
-
-    public Review(String body,String author,int Stars) {
+    public Review(String body, String author, int stars, Store store) {
         this.body = body;
-        this.author=author;
-        this.Stars=Stars;
-
+        this.author = author;
+        this.stars = stars;
+        this.store = store;
     }
 
-    public String getAuthor() {
-        return author;
+    public Review(String body, String author, int stars, Theater theater, String movie) {
+        this.body = body;
+        this.author = author;
+        this.stars = stars;
+        this.store = theater;
+        this.movie = movie;
     }
 
-    public  String getBody(){
-        return  body;
-
-    }
-
-    public int getStars(){
-
-        return Stars;
+    public int getStars() {
+        return stars;
     }
 
     @Override
-    public  String toString() {
-        return "Review{" +
-                "body='" + body + '\'' +
-                ", author='" + author + '\'' +
-                ", Stars=" + Stars +
-                '}';
+    public String toString() {
+        String reviewInfo = String.format("Author: %s\nStars: %d\n%s", author, stars, body);
+        if (store != null) {
+            reviewInfo += "\nPlace: " + store.getName();
+            if (store instanceof Theater && movie != null) {
+                reviewInfo += "\nMovie: " + movie;
+            }
+        }
+        return reviewInfo;
     }
-
-
-
 }
