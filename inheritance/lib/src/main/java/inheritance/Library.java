@@ -4,35 +4,13 @@
 package inheritance;
 
 public class Library {
-    public boolean someLibraryMethod() {
-        return true;
-    }
+
 
 
     public static  void main (String [] arg){
 
 
-        Restaurant restaurant = new Restaurant("Yasmeen", 0, "$$");
-        Review restaurantReview = new Review("Is very good", "Ali", 4);
-        restaurant.addReview(restaurantReview);
 
-        shop shop = new shop("Cool Shop", "Moderate");
-        Review shopReview = new Review("Nice products", "Sara", 5);
-        shop.addReview(shopReview);
-
-        Theater theater = new Theater("Awesome Theater", "Inception");
-        Review theaterReview = new Review("Loved the experience", "John", 4);
-        theater.addReview(theaterReview);
-
-
-        System.out.println("Restaurant Information:");
-        System.out.println(restaurant);
-
-        System.out.println("Shop Information:");
-        System.out.println(shop);
-
-        System.out.println("Theater Information:");
-        System.out.println(theater);
     }
 
 }

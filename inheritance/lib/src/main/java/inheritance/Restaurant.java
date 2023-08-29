@@ -1,65 +1,17 @@
 package inheritance;
 
-import java.util.ArrayList;
-import java.util.List;
+public class Restaurant  extends Store{
+    private int stars;
+    private int priceCategory;
 
-public class Restaurant {
-
-    private String name;
-    private int Stars;
-
-    private String Price;
-    private List<Review> reviews;
-
-    public Restaurant(String name, int Stars, String Price) {
-        this.name = name;
-        this.Price = Price;
-        this.Stars = Stars;
-        this.reviews = new ArrayList<>();
+    public Restaurant(String name, int stars, int priceCategory) {
+        super(name);
+        this.stars = stars;
+        this.priceCategory = priceCategory;
     }
 
-    public String getName() {
-
-        return name;
+    public void updateStars() {
+        int totalStars = reviews.stream().mapToInt(review -> review.getStars()).sum();
+        stars = totalStars / reviews.size();
     }
-
-    public int getStars() {
-
-        return Stars;
-    }
-
-    public String getPrice() {
-
-        return Price;
-    }
-
-    @Override
-    public String toString() {
-        return "Restaurant{" +
-                "name='" + name + '\'' +
-                ", Stars=" + Stars +
-                ", Price='" + Price + '\'' +
-                '}';
-    }
-
-    public void addReview(Review review) {
-        reviews.add(review);
-        updateStarRating();
-
-        }
-
-    public int  updateStarRating() {
-        int totalStars = 0;
-        for (Review review : reviews) {
-            totalStars += review.getStars();
-        }
-        Stars = totalStars / reviews.size();
-        return Stars;
-    }
-
-
-    public List<Review> getReviews() {
-        return reviews;
-    }
-
 }

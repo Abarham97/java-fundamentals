@@ -3,41 +3,24 @@ package inheritance;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Theater {
-
-    private String name;
-    private String movie;
+public class Theater extends Store{
     private List<String> movies;
-    private List<Review> reviews;
 
-    public Theater(String name, String movie) {
-        this.name = name;
+    public Theater(String name) {
+        super(name);
         this.movies = new ArrayList<>();
-        this.movies.add(movie);
-        this.reviews = new ArrayList<>();
     }
 
-    public void addMovie(String newMovie) {
-        movies.add(newMovie);
+    public void addMovie(String movie) {
+        movies.add(movie);
     }
 
     public void removeMovie(String movie) {
         movies.remove(movie);
     }
 
-    public void setMovie(String movie) {
-        this.movie = movie;
-    }
-
-    public List<String> getMovies() {
-        return movies;
-    }
-
-    public void addReview(Review review) {
-        reviews.add(review);
-    }
-
-    public List<Review> getReviews() {
-        return reviews;
+    @Override
+    public String toString() {
+        return String.format("Theater: %s\nMovies: %s", name, movies.toString());
     }
 }
